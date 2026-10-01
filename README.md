@@ -6,7 +6,7 @@
 
 ## 1. Сравнительная таблица Threat Intelligence Feeds
 
-Файл: []().
+Файл: [Threat_intelligence_feeds.xlsx](artifacts%2FThreat_intelligence_feeds.xlsx).
 
 В книге семь листов:
 
