@@ -1,0 +1,9 @@
+{{< include README.md >}}
+
+---
+
+::: {.callout-note appearance="simple"}
+Страница собрана автоматически {{< env BUILD_DATE "при локальной сборке" >}}
+из коммита [`{{< env SHORT_SHA "—" >}}`](https://github.com/{{< env GITHUB_REPOSITORY "" >}}/commit/{{< env GITHUB_SHA "" >}}).
+Всё на сайте соответствует этому состоянию репозитория.
+:::

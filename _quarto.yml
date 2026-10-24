@@ -1,0 +1,53 @@
+project:
+  type: website
+  # Рендерятся только перечисленные файлы. Остальное (черновики, данные)
+  # на сайт не попадает, пока не добавлено сюда или в resources.
+  render:
+    - index.qmd
+    - artifacts/analytical_report.qmd
+    - artifacts/presentation.qmd
+    - artifacts/speaker_notes.md
+  # Файлы, которые копируются на сайт как есть (без рендера).
+  resources:
+    - artifacts/Глава1.docx
+
+lang: ru
+
+website:
+  title: "ВКР"
+  repo-url: https://github.com/GrigoryTishkov/Threat-Intelligence-VKR
+  repo-actions: [source, issue]
+  navbar:
+    left:
+      - text: "Глава1.docx"
+        icon: file-earmark-word
+        href: artifacts/Глава1.docx
+      - text: "Отчёт"
+        href: artifacts/analytical_report.qmd
+      - text: "Доклад"
+        menu:
+          - text: "Презентация"
+            href: artifacts/presentation.qmd
+          - text: "Текст выступления"
+            href: artifacts/speaker_notes.md
+
+format:
+  html:
+    toc: true
+    css: styles.css
+
+# Блоки > [!NOTE] из README показываются на сайте так же заметно, как на GitHub.
+filters:
+  - alert-callout.lua
+
+# Закрыть все страницы (и отчёт, и слайды) от поисковых систем: опубликованный
+# текст иначе может найтись при проверке на заимствования. 
+# header-includes, а не include-in-header: у отчёта свой include-in-header (стили),
+# и он заменил бы общий; header-includes добавляется к нему.
+header-includes: |
+  <meta name="robots" content="noindex, nofollow">
+
+execute:
+  # Код R выполняется заново при каждой сборке в CI.
+  # Так сайт подтверждает, что отчёт воспроизводится из исходных данных.
+  freeze: false

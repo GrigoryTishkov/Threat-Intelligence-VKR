@@ -1,0 +1,10 @@
+/* Итоговый документ — заметная кнопка в верхнем меню на всех страницах сайта. */
+.navbar .nav-link[href$=".docx"] {
+  background: #ffffff;
+  color: #1f3b57 !important;
+  border-radius: .4rem;
+  font-weight: 600;
+  padding: .3rem .85rem !important;
+  margin: .35rem .6rem .35rem 0;
+}
+.navbar .nav-link[href$=".docx"]:hover { background: #e8f0f6; }
