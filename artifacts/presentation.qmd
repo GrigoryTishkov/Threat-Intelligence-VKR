@@ -1,6 +1,7 @@
 ---
-# САМОСТОЯТЕЛЬНАЯ ПРЕЗЕНТАЦИЯ QUARTO НА R, редакция 4.6 от 26.10.2026.
-# 12 основных слайдов (текст выступления около 1 280 слов, 10–11 минут) и 2 дополнительных для вопросов.
+# САМОСТОЯТЕЛЬНАЯ ПРЕЗЕНТАЦИЯ QUARTO НА R, редакция 4.7 от 26.10.2026.
+# 12 основных слайдов (текст выступления около 1 280 слов, 10–11 минут), заключительный слайд 13
+# «Спасибо за внимание» и 2 дополнительных для вопросов (14 и 15).
 #
 # ЗАПУСК В RSTUDIO
 # 1. Откройте файл (File → Open File) и нажмите Render.
@@ -10,7 +11,7 @@
 #    Файл сам ничего не устанавливает и не обращается к интернету.
 # 3. Из Terminal: quarto render presentation.qmd
 # 4. Показ: стрелки или пробел — навигация, S — окно докладчика,
-#    Esc — обзор слайдов, G — переход по номеру (например, к дополнительному 13).
+#    Esc — обзор слайдов, G — переход по номеру (например, к дополнительному 14).
 # 5. PDF: откройте presentation.html?print-pdf в Chrome и сохраните страницу как PDF.
 #
 # ГДЕ ЧТО НАХОДИТСЯ
@@ -64,6 +65,8 @@
 # в главе 157/168 — на слайдах не выводятся) и CHAPTER_BIBLIOGRAPHY (редакция v4 главы).
 # Редакция 4.6 собрана: Quarto 1.10.19, R 4.3.3, knitr 1.45, rmarkdown 2.25; слайды
 # просмотрены в Chromium при 1280×720, экспорт в PDF — 14 страниц.
+# В редакции 4.7 добавлен заключительный слайд 13 «Спасибо за внимание» в оформлении титульного;
+# дополнительные слайды стали 14 и 15. Экспорт в PDF — 15 страниц.
 pagetitle: "Разработка системы анализа научных публикаций для обогащения материалов киберразведки с использованием больших языковых моделей"
 lang: ru
 engine: knitr
@@ -2179,6 +2182,8 @@ html.reveal-print .reveal .slides .pdf-page > section { padding:48px 64px !impor
 .reveal .cover-label { font-size:18px; letter-spacing:.16em; color:var(--teal); margin:15px 0 48px; }
 .reveal .cover h1 { font-size:66px; line-height:1.08; margin:0 0 32px; font-weight:650; letter-spacing:-.04em; }
 .reveal .cover-sub { font-size:27px; line-height:1.4; color:var(--muted); }
+.reveal .cover.thanks h1 { font-size:76px; line-height:1.05; margin:118px 0 34px; letter-spacing:-.04em; }
+.reveal .cover.thanks .cover-sub { font-size:24px; }
 .reveal .cover-bottom { position:absolute; left:64px; right:64px; bottom:65px; padding-top:20px; border-top:2px solid var(--line); font-size:18px; color:var(--muted); }
 .reveal .cover-bottom span { float:right; }
 .reveal .chart-caption { font-size:23px; color:var(--muted); }
@@ -2452,10 +2457,25 @@ show_slide(r"---(
 
 
 
-## Дополнительно: состав TI-сведений {#slide-13 .backup}
+## {#slide-13 .cover .thanks}
 
 ```{r}
 #| label: slide-13
+#| output: asis
+show_slide(r"---(
+<div class="cover-label">ДИПЛОМНАЯ РАБОТА · РЕЗУЛЬТАТЫ ПЕРВОЙ ГЛАВЫ</div>
+<h1>Спасибо <em>за&nbsp;внимание</em></h1>
+<p class="cover-sub">Разработка системы анализа научных публикаций для обогащения<br>материалов киберразведки с&nbsp;использованием больших языковых моделей</p>
+<div class="cover-bottom">{{presenter}}</div>
+)---")
+```
+
+
+
+## Дополнительно: состав TI-сведений {#slide-14 .backup}
+
+```{r}
+#| label: slide-14
 #| output: asis
 show_slide(r"---(
 {{table:ti}}
@@ -2464,10 +2484,10 @@ show_slide(r"---(
 
 
 
-## Дополнительно: извлечение из публикаций {#slide-14 .backup}
+## Дополнительно: извлечение из публикаций {#slide-15 .backup}
 
 ```{r}
-#| label: slide-14
+#| label: slide-15
 #| output: asis
 show_slide(r"---(
 {{table:publications}}
