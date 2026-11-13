@@ -9,7 +9,7 @@ project:
     - artifacts/speaker_notes.md
   # Файлы, которые копируются на сайт как есть (без рендера).
   resources:
-    - artifacts/Глава1.docx
+    - artifacts/Глава1-2.docx
 
 lang: ru
 
@@ -19,9 +19,9 @@ website:
   repo-actions: [source, issue]
   navbar:
     left:
-      - text: "Глава1.docx"
+      - text: "Глава1-2.docx"
         icon: file-earmark-word
-        href: artifacts/Глава1.docx
+        href: artifacts/Глава1-2.docx
       - text: "Отчёт"
         href: artifacts/analytical_report.qmd
       - text: "Доклад"
